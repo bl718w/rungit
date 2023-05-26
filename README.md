@@ -1,1 +1,3 @@
 # rungit
+
+validte git action
