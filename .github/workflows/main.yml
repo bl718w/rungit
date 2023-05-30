@@ -32,6 +32,7 @@ jobs:
       fav-number: "${{steps.work.outputs.FAV_NUMBER}}"
   job3:
     name: Working With Outputs job3
+    needs: job2
     runs-on: ubuntu-latest
     steps:
       - name: Show Output 
