@@ -16,7 +16,6 @@ jobs:
           echo $VAR1 $VAR2 $VAR3 $VAR4.
   job2:
     name: Working With Outputs job2
-    id: job2
     runs-on: ubuntu-latest
     steps:
       - name: Do Work
@@ -26,15 +25,15 @@ jobs:
           echo '::set-output name=FAV_COLOR::blue'
       - name: Read Output
         run: |
-          echo "${{ steps.work.outputs.FAV_NUMBER }}"
-          echo "${{ steps.work.outputs.FAV_COLOR }}"
+          echo "${{steps.work.outputs.FAV_NUMBER}}"
+          echo "${{steps.work.outputs.FAV_COLOR}}"
     outputs:
       fav-animal: tiger
-      fav-number: ${{ steps.work.outputs.FAV_NUMBER }}
+      fav-number: ${{steps.work.outputs.FAV_NUMBER}}
   job3:
     name: Working With Outputs job3
     runs-on: ubuntu-latest
     steps:
       - run: |
-        echo "${{ needs.job2.outputs.fav-animal }}"
-        echo "${{ needs.job2.outputs.fav-number }}" 
+        echo ${{needs.job2.outputs.fav-animal}}
+        echo ${{needs.job2.outputs.fav-number}} 
