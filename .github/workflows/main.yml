@@ -16,7 +16,6 @@ jobs:
           echo $VAR1 $VAR2 $VAR3 $VAR4.
   job2:
     name: Working With Outputs job2
-    id: job2
     runs-on: ubuntu-latest
     steps:
       - name: Do Work
