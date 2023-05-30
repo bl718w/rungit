@@ -36,5 +36,5 @@ jobs:
     steps:
       - name: Show Output 
         run: |
-          echo "${{needs.job2.outputs.fav-animal}}"
-          echo "${{needs.job2.outputs.fav-number}}"
+          echo ${{needs.job2.outputs.fav-animal}}
+          echo ${{needs.job2.outputs.fav-number}}
