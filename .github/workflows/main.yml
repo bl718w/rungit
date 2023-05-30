@@ -36,5 +36,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        echo "${{ jobs.job2.outputs.fav-animal }}"
-        echo "${{ jobs.job2.outputs.fav-number }}" 
+        echo "${{ needs.job2.outputs.fav-animal }}"
+        echo "${{ needs.job2.outputs.fav-number }}" 
