@@ -28,13 +28,13 @@ jobs:
           echo "${{steps.work.outputs.FAV_NUMBER}}"
           echo "${{steps.work.outputs.FAV_COLOR}}"
     outputs:
-      fav-animal: tiger
-      fav-number: ${{steps.work.outputs.FAV_NUMBER}}
+      fav-animal: 'tiger'
+      fav-number: "${{steps.work.outputs.FAV_NUMBER}}"
   job3:
     name: Working With Outputs job3
     runs-on: ubuntu-latest
     steps:
       - name: Show Output 
         run: |
-          echo ${{needs.job2.outputs.fav-animal}}
-          echo ${{needs.job2.outputs.fav-number}}
+          echo "${{needs.job2.outputs.fav-animal}}"
+          echo "${{needs.job2.outputs.fav-number}}"
