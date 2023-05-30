@@ -34,6 +34,7 @@ jobs:
     name: Working With Outputs job3
     runs-on: ubuntu-latest
     steps:
-      - run: |
-        echo ${{needs.job2.outputs.fav-animal}}
-        echo ${{needs.job2.outputs.fav-number}} 
+      - name: Show Output 
+        run: |
+          echo ${{needs.job2.outputs.fav-animal}}
+          echo ${{needs.job2.outputs.fav-number}} 
