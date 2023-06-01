@@ -21,8 +21,10 @@ jobs:
       - name: Do Work
         id: work
         run: |
-          echo '::set-output name=FAV_NUMBER::3'
-          echo '::set-output name=FAV_COLOR::blue'
+          # echo '::set-output name=FAV_NUMBER::3'
+          # echo '::set-output name=FAV_COLOR::blue'
+          echo "{FAV_NUMBER}={3}" >> $GITHUB_OUTPUT
+          echo "{FAV_COLOR}={blue}" >> $GITHUB_OUTPUT
       - name: Read Output
         run: |
           echo "${{steps.work.outputs.FAV_NUMBER}}"
