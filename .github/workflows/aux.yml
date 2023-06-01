@@ -1,0 +1,17 @@
+name: GitHub Actions Demo 2
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  job1:
+    name: gitaction job1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show the demo running
+        env:
+          VAR1: The Rabbit
+          VAR2: and the Turtle
+          VAR3: is fictional tale
+          VAR4: that teaches lesson about life.
+        run: |
+          echo $VAR1 $VAR2 $VAR3 $VAR4.
+
